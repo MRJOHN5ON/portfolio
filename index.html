@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- UNICONS -->
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <!-- FAVICON -->
+   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+   <title>Ryley Johnson</title>
+
+   <!--EmailJS library -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+   <script type="text/javascript">
+      (function () {
+         emailjs.init("QCTTc-Jm31CfWV3mS"); // Public Key
+      })();
+   </script>
+</head>
+
+<body>
+   <div class="container">
+      <!-- HEADER -->
+      <nav id="header">
+         <div class="nav-logo">
+            <p class="nav-name">JOHNSON</p>
+            <span>.</span>
+         </div>
+         <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+               <li class="nav_list">
+                  <a href="#home" class="nav-link active-link">Home</a>
+                  <div class="circle"></div>
+               </li>
+               <li class="nav_list">
+                  <a href="#about" class="nav-link">About</a>
+                  <div class="circle"></div>
+               </li>
+               <li class="nav_list">
+                  <a href="#projects" class="nav-link">Projects</a>
+                  <div class="circle"></div>
+               </li>
+               <li class="nav_list">
+                  <a href="#contact" class="nav-link">Contact</a>
+                  <div class="circle"></div>
+               </li>
+            </ul>
+         </div>
+         <div class="nav-button">
+            <a href="assets/files/resume.pdf" download class="btn">RESUME<i class="uil uil-file-alt"></i></a>
+         </div>
+         <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+         </div>
+      </nav>
+
+      <!-- MAIN CONTENT -->
+      <main class="wrapper">
+         <!-- FEATURED BOX -->
+         <section class="featured-box" id="home">
+            <div class="featured-text">
+               <div class="featured-text-card">
+                  <span>Ryley Johnson</span>
+               </div>
+               <div class="featured-name">
+                  <p><span class="typedText"></span></p>
+               </div>
+               <div class="featured-text-info">
+                  <p>A dedicated QA Engineer with expertise in manual and automated testing, complemented by nearly a
+                     decade of problem-solving and leadership experience in wildland firefighting and a flair for
+                     AI-driven graphic design.</p>
+               </div>
+               <div class="featured-text-btn">
+                  <a href="assets/files/resume.pdf" download class="btn blue-btn">RESUME<i
+                        class="uil uil-file-alt"></i></a>
+                  <a href="assets/files/cover_letter.pdf" download class="btn">COVER LETTER<i
+                        class="uil uil-file-alt"></i></a>
+               </div>
+               <div class="social_icons">
+                  <div class="icon">
+                     <a href="https://www.linkedin.com/in/ryleyj" target="_blank">
+                        <i class="uil uil-linkedin-alt"></i>
+                     </a>
+                  </div>
+                  <div class="icon">
+                     <a href="https://github.com/MRJOHN5ON" target="_blank">
+                        <i class="uil uil-github-alt"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="featured-image">
+               <div class="image">
+                  <img src="assets/images/avatar.png" alt="avatar">
+               </div>
+            </div>
+            <div class="scroll-icon-box">
+               <a href="#about" class="scroll-btn">
+                  <i class="uil uil-mouse-alt"></i>
+                  <p>READ MORE!</p>
+               </a>
+            </div>
+         </section>
+
+         <!-- ABOUT BOX -->
+         <section class="section" id="about">
+            <div class="top-header">
+               <h1>About Me</h1>
+            </div>
+            <div class="row">
+               <div class="col">
+                  <div class="about-info">
+                     <h3>Hi there,</h3>
+                     <p>I'm a recent graduate of the TripleTen QA Bootcamp and a retired firefighter. With experience in
+                        social media management and freelance QA projects on platforms like uTest and Testlio, I bring a
+                        strong dedication to delivering top-notch software quality and enhancing user experiences. I'm
+                        ready to apply my skills effectively in QA Engineering.</p>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="skills-box">
+                     <div class="skills-header">
+                        <h1>Skills</h1>
+                     </div>
+                     <div class="skills-list">
+                        <span>Android Studio</span>
+                        <span>Charles Proxy</span>
+                        <span>Automation testing</span>
+                        <span>API Testing</span>
+
+                     </div>
+                  </div>
+                  <div class="skills-box">
+                     <div class="skills-list">
+                        <span>JavaScript</span>
+                        <span>Jira</span>
+                        <span>TestRail</span>
+                        <span>Regression testing</span>
+                     </div>
+                  </div>
+                  <div class="skills-box">
+                     <div class="skills-list">
+                        <span>SQLite</span>
+                        <span>PostgreSQL</span>
+                        <span>Postman</span>
+                        <span>Manual testing</span>
+                        <span>Cross Platform Testing</span>
+                        <span>Agile</span>
+                        <span>DevTools</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- PROJECT BOX -->
+         <section class="section" id="projects">
+            <div class="top-header">
+               <h1>Projects</h1>
+            </div>
+            <div class="project-container">
+               <div class="project-box" style="background-image: url('assets/images/postman.svg');">
+                  <a href="project1.html">
+                     <h3>API TESTING WITH POSTMAN</h3>
+                     <p>Urban Lunch API</p>
+                  </a>
+               </div>
+               <div class="project-box" style="background-image: url('assets/images/droid4.png');">
+                  <a href="project2.html">
+                     <h3>Mobile App Testing</h3>
+                     <p>Android Studio Virtual Device Emulator</p>
+                  </a>
+               </div>
+               <div class="project-box" style="background-image: url('assets/images/project3.1.png');">
+                  <a href="project3.html">
+                     <h3>Testing Practices and Analysis</h3>
+                     <p>A Detailed Example of Analyzing Requirements, Designing Test Cases, and Reviewing Results</p>
+                  </a>   
+               </div>
+               <div class="project-box" style="background-image: url('assets/images/project4.2.webp');">
+                  <a href="https://github.com/MRJOHN5ON/Swaglabs-Username-Acceptance-Test">
+                     <h3>Automated Login/Password Testing</h3>
+                     <p>Using Selenium & Python</p>
+                  </a>   
+               </div>
+            </div>
+         </section>
+
+
+         <!-- CONTACT BOX -->
+         <section class="section" id="contact">
+            <div class="top-header">
+               <h1>Get in touch</h1>
+               <span>Do you have a project in your mind, contact me here</span>
+            </div>
+            <div class="row">
+               <div class="col">
+                  <div class="contact-info">
+                     <h2>Hire Me <i class="uil uil-corner-right-down"></i></h2>
+                     <p>
+                        <i class="uil uil-envelope"></i>
+                        Email: <a href="mailto:ryleyjohnsonemail@gmail.com">ryleyjohnsonemail@gmail.com</a>
+                     </p>
+                     <p>
+                        <i class="uil uil-phone"></i>
+                        Tel: <a href="tel:+19714705505">+1 971 470 5505</a>
+                     </p>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="form-control" id="contact-form">
+                     <div class="form-inputs">
+                        <input type="text" id="name" class="input-field" placeholder="Name">
+                        <input type="email" id="email" class="input-field" placeholder="Email">
+                     </div>
+                     <div class="text-area">
+                        <textarea id="message" placeholder="message"></textarea>
+                     </div>
+                     <div class="form-button">
+                        <button class="btn" type="button" onclick="sendEmail()">Send <i
+                              class="uil uil-message"></i></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+         <div class="top-footer">
+            <p>Ryley Johnson.</p>
+         </div>
+         <div class="middle-footer">
+            <ul class="footer-menu">
+               <li class="footer_menu_list">
+                  <a href="#home">Home</a>
+               </li>
+               <li class="footer_menu_list">
+                  <a href="#about">About</a>
+               </li>
+               <li class="footer_menu_list">
+                  <a href="#projects">Projects</a>
+               </li>
+               <li class="footer_menu_list">
+                  <a href="#contact">Contact</a>
+               </li>
+            </ul>
+         </div>
+         <div class="social_icons">
+            <div class="icon">
+               <a href="https://www.linkedin.com/in/ryleyj" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+            </div>
+            <div class="icon">
+               <a href="https://github.com/MRJOHN5ON" target="_blank"><i class="uil uil-github-alt"></i></a>
+            </div>
+         </div>
+         <div class="bottom-footer">
+            <p>&copy; THANKS FOR STOPPING BY!</p>
+         </div>
+      </footer>
+
+      <!-- JAVASCRIPT -->
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="assets/js/main.js"></script>
+
+      <!-- EmailJS send function -->
+      <script type="text/javascript">
+         function sendEmail() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            var templateParams = {
+               name: name,
+               email: email,
+               message: message
+            };
+
+            emailjs.send('service_f9dkmsd', 'template_w0fo8ha', templateParams)
+               .then(function (response) {
+                  console.log('SUCCESS!', response.status, response.text);
+                  alert("Email sent successfully!");
+               }, function (error) {
+                  console.log('FAILED...', error);
+                  alert("Failed to send email. Please try again later.");
+               });
+         }
+      </script>
+   </div>
+</body>
+
+</html>

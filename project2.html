@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/project1.css"> 
+    <style>
+        /* ----- GLOBAL STYLES ----- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #090300; 
+            background-color: #646363; 
+        }
+
+        /* ----- CONTAINER STYLES ----- */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Center text in container */
+        }
+
+        /* ----- MAIN CONTENT STYLES ----- */
+        main {
+            padding: 20px;
+        }
+
+        /* ----- HEADER STYLES ----- */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            text-align: center; /* Center all headers */
+            margin: 10px 0;
+        }
+
+        /* ----- IMAGES STYLES ----- */
+        img {
+            display: block;
+            max-width: 80%; /* Adjust as needed */
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto; /* Center the image */
+        }
+
+        /* ----- PROJECT CONTAINER STYLES ----- */
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .project-box {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .project-box h3, .project-box p {
+            margin: 0;
+        }
+
+        .project-box a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+        }
+
+        .project-box a:hover {
+            text-decoration: underline;
+        }
+
+        .project-box img {
+            width: 80%; /* Adjusts the image width specifically for .project-box */
+            max-width: 600px; /* Sets a maximum width to ensure it does not get too large */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #484848;
+            color: #fff;
+        }
+
+        /* GitHub button styles */
+        .github-button {
+            display: block;
+            width: 120px; /* Adjust size as needed */
+            height: 60px; /* Adjust size as needed */
+            margin: 0 auto; /* Centers the button */
+            background: url('assets/GitHub.png') no-repeat center center;
+            background-size: contain; /* Ensures the image scales properly */
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth scaling transition */
+        }
+
+        .github-button:hover {
+            transform: scale(1.1); /* Scales the button up slightly on hover */
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 80%; /* Adjust the percentage as needed */
+            margin: 20px auto; /* Center the container and add margin around it */
+            text-align: center;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        
+        /* Center the table on the page and add margins */
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px; /* Adjust as needed */
+}
+
+/* Style for the table */
+.test-case-summary {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as needed */
+}
+
+/* Style for table headers and cells */
+.test-case-summary th, 
+.test-case-summary td {
+    border: 1px solid #ddd; /* Border color */
+    padding: 8px; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style for table headers */
+.test-case-summary th {
+    background-color: #e96f3a; /* Light gray background for headers */
+    font-weight: bold;
+}
+
+/* Style for failed status */
+.status-failed {
+    font-weight: bold;
+    color: red;
+}
+
+/* Style for table rows */
+.test-case-summary tr:nth-child(even) {
+    background-color: #c5c2c2; /* Zebra striping for rows */
+}
+/* New section styles */
+.analysis-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .analysis-section aside {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .analysis-section aside img {
+            margin-right: 10px;
+        }
+
+        .analysis-section h3 {
+            margin-top: 0;
+        }
+
+        .analysis-section img {
+            display: block;
+            max-width: 50%; /* Adjust as needed */
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto; /* Center the image */
+        }
+
+        .analysis-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .analysis-section ul li {
+            margin-bottom: 20px;
+        }
+
+        .analysis-section ul li h4 {
+            margin: 10px 0 5px 0;
+        }
+
+        .analysis-section ul li p {
+            margin: 0;
+        }
+        /* Footer styles */
+        footer {
+            background-color: #3b3b3b; /* Darker background color */
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1><u>ANDROID EMULATION TESTING REPORT FOR URBAN LUNCH APP</u></h1>
+        <br><br><br><br>
+        <h2><u>PRODUCT OVERVIEW</u></h2>
+        <br>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/0n95FT2YMgU?si=CO3pSNu0VlQhBTqz" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <p><strong>Urban Lunch</strong><i>
+             is an app designed to personalize business lunches by combining orders from different restaurants in the city. The app was created to address the lack of variety in business lunches offered by single-cuisine restaurants. With Urban Lunch, users can mix and match dishes from multiple restaurants into one order, providing a diverse dining experience.</i></p>
+
+        <h2><u>Key Features</u></h2>
+        <p><strong>Variety in One Order:</strong> Combine dishes like gazpacho, sushi, and mango mousse with chia in a single order.</p>
+        <p><strong>Simple Process:</strong></p>
+        <ul>
+            <li>Select a restaurant as the pick-up point.</li>
+            <li>Choose dishes from a comprehensive list.</li>
+            <li>Confirm the order.</li>
+        </ul>
+        <p><strong>Efficient Delivery:</strong> Couriers collect the prepared dishes from the respective restaurants, bring them to the pick-up point, and pack them carefully for the customer to collect and enjoy.</p>
+
+        <h2><u>TESTING PROCESS</u></h2>
+        <p>The testing process included automated scripts to verify the functionality of key features, ensuring that users could select multiple restaurants, combine dishes, and complete the order process without issues. Test cases covered user interactions, validation checks, and edge cases to ensure a robust and reliable app experience.</p>
+
+        <div class="accordion-container">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">MIND MAP FOR URBAN LUNCH APP TESTING</button>
+                    <div class="accordion-content">
+            
+                        <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2Ff59a5357-5aa6-495e-91f9-bc903efda316%2FScreen_Shot_2024-07-10_at_3.07.14_PM.png?table=block&id=18160e91-e191-4fea-a0f9-2f9a686bf5ba&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=1730&userId=&cache=v2" alt="Mind Map 1">
+                        <p><strong>Selecting a pick-up location</strong></p>
+                        <ul>
+                            <li>Ensure no pick-up points are selected by default.</li>
+                            <li>Check highlighting and selection of pick-up points upon tap.</li>
+                            <li>Confirm repeated tap cancels selection.</li>
+                            <li>Ensure selecting a new pick-up point updates the selection.</li>
+                            <li>Verify selected pick-up point name displays in the footer.</li>
+                        </ul>
+                        <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2F5be44737-db68-4c13-be85-2b5fe0c3f80c%2FScreen_Shot_2024-07-10_at_3.07.23_PM.png?table=block&id=2ae935e9-ef82-4153-8fae-dc466c6cbc7c&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=1730&userId=&cache=v2" alt="Mind Map 2">
+                        <p><strong>Choosing and adding dishes</strong></p>
+                        <ul>
+                            <li>Ensure no dishes are pre-selected by default.</li>
+                            <li>Verify highlighting and selection of dishes upon tap.</li>
+                            <li>Confirm repeating tap cancels selection.</li>
+                            <li>Ensure adding selected dishes to the basket and proceeding to checkout is possible.</li>
+                        </ul>
+                        <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2F91e9c547-1fb4-4077-afc2-5f08935a22ec%2FScreen_Shot_2024-07-10_at_3.07.29_PM.png?table=block&id=c6062b6b-a963-4e4e-98ea-f11f1c0e75af&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=1730&userId=&cache=v2" alt="Mind Map 3">
+                        <p><strong>Choosing and adding restaurants</strong></p>
+                        <ul>
+                            <li>Verify no restaurants are pre-selected by default.</li>
+                            <li>Ensure highlighting and selection of restaurants upon tap.</li>
+                            <li>Confirm selecting a new restaurant updates the selection.</li>
+                            <li>Verify selected restaurants display on the summary page.</li>
+                        </ul>
+                        <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2F984bcee0-3f0e-496e-80e5-ed561a3076d9%2FScreen_Shot_2024-07-10_at_3.07.36_PM.png?table=block&id=10d65822-ca08-4a75-84fe-3d703817344d&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=2000&userId=&cache=v2" alt="Mind Map 4">
+                        <p><strong>Summary page</strong></p>
+                        <ul>
+                            <li>Ensure order details are correct before confirmation.</li>
+                            <li>Verify order summary displays selected dishes, pick-up point, and restaurants.</li>
+                            <li>Confirm option to edit the order before finalizing.</li>
+                            <li>Ensure submitting the order leads to a confirmation screen.</li>
+                        </ul>
+                            <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2F413a80cf-eb13-4ef8-aa4c-8209b014e122%2FScreen_Shot_2024-07-10_at_3.07.42_PM.png?table=block&id=9e9dc91d-fc2d-48d3-b8e0-33276de3306d&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=1730&userId=&cache=v2" alt="Mind Map 5">
+                            <p><strong>Final Confirmation</strong></p>
+                        <ul>
+                            <li>Verify confirmation message displays after order submission.</li>
+                            <li>Ensure confirmation details include pick-up point, selected dishes, and restaurants.</li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table class="test-case-summary">
+                <thead>
+                    <tr>
+                        <th>Test Case Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The map shows the pickup points</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure no pick-up points are selected by default</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Check highlighting and selection of pick-up points upon tap</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Confirm repeated tap cancels selection</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure selecting a new pick-up point updates the selection</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Verify selected pick-up point name displays in the footer</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Confirm drop-down list contains all restaurants</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Validate each dish item displays the name, -/+, and arrow buttons</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure tapping on the list (except +) navigates to the dish details screen</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Verify clicking + adds the dish to the order list from the nearest restaurant to the pick-up point</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Verify clicking + adds the dish amount without any errors in the GUI</td>
+                        <td class="status-failed">FAILED</td>
+                    </tr>
+                    <tr>
+                        <td>Check the order progress displayed in the footer</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure "Next" button in the footer is inactive if no dishes are in the order list and active otherwise</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Verify the return arrow navigates back to the dish list</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Confirm tapping the restaurant name adds the dish to the order list</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure the dish list is scrollable if it exceeds screen length</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Verify the total amount calculation includes the price of all prepared dishes and delivery</td>
+                        <td class="status-failed">FAILED</td>
+                    </tr>
+                    <tr>
+                        <td>Confirm tapping the "Order" button navigates to the order tracking screen</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Validate the map displays pick-up points, restaurant locations, and routes</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure the list of dishes and associated restaurants are displayed and scrollable</td>
+                        <td class="status-failed">FAILED</td>
+                    </tr>
+                    <tr>
+                        <td>Confirm the final cost (Amount) matches the sum of ordered dishes</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Verify automatic switch to the "Order is delivered" screen when the timer expires</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure the map shows the correct pick-up point location</td>
+                        <td class="status-failed">FAILED</td>
+                    </tr>
+                    <tr>
+                        <td>Test error message for denied geolocation access</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Verify error message when attempting to order without adding dishes</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Confirm clicking "I got the order" button marks the order as completed, shows a feedback bar, and redirects to the initial screen for a new order</td>
+                        <td>PASSED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure the costs of each product match the costs outlined in the requirements</td>
+                        <td class="status-failed">FAILED</td>
+                    </tr>
+                    <tr>
+                        <td>Ensure the delivery time countdown matches the advertised delivery time when ordering</td>
+                        <td class="status-failed">FAILED</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="analysis-section">
+            <h2>ANALYSIS OF FAILED TEST CASES</h2>
+
+           
+
+            <div>
+                <h3>1. Verify clicking + adds the dish amount without any errors in the GUI</h3>
+                <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2F03e9fa1d-b2d3-4fe6-a35c-2a6b467c4b6b%2FScreen_Shot_2024-07-10_at_14.51.59.png?table=block&id=e7ed9ddf-2c3a-49d6-939e-42da71dfbd3d&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=2000&userId=&cache=v2" alt="Issue Screenshot">
+                <ul>
+                    <li><strong>Issue Description:</strong> When increasing the quantity of the "Tomato Soup with Croutons" item using the + button, the price text overlaps with the restaurant name when the quantity exceeds 9 items. This issue worsens when the quantity exceeds 99 items, causing further overlap and making it difficult for users to read the information clearly.</li>
+                    <li><strong>Impact:</strong> Poor user experience due to UI elements overlapping, leading to potential confusion and frustration when placing large quantity orders.</li>
+                    <li><strong><u>Recommendation:</u></strong><br><br>
+                        <ul>
+                            <li><strong>UI Adjustment:</strong> Modify the GUI layout to dynamically adjust the placement of price text based on the quantity selected, ensuring it does not overlap with adjacent elements.</li>
+                            <li><strong>Testing Focus:</strong> Conduct thorough GUI testing with varying quantities of all menu items to ensure no overlaps occur across different screen sizes and resolutions.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>2. Verify the total amount calculation includes the price of all prepared dishes and delivery</h3>
+                <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2F54941417-12fd-46b6-9b41-9822fdd59fe4%2FScreen_Shot_2024-07-10_at_13.35.04.png?table=block&id=654c5ca1-0fea-4213-aeb1-15332d1b443d&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=2000&userId=&cache=v2" alt="Issue Screenshot">
+                <ul>
+                    <li><strong>Issue Description:</strong> The total amount displayed on the order confirmation screen did not consistently include delivery costs or accurately sum up the prices of all ordered dishes. In some instances, delivery charges were omitted from the total, leading to incorrect billing.</li>
+                    <li><strong>Impact:</strong> Financial discrepancies and user dissatisfaction when the total amount billed does not match the expected sum, potentially affecting trust in the app's payment system.</li>
+                    <li><strong><u>Recommendation:</u></strong><br><br>
+                        <ul>
+                            <li><strong>Backend Validation:</strong> Review the backend calculation logic to ensure all components of the order, including delivery fees, are correctly factored into the total amount.</li>
+                            <li><strong>Integration Testing:</strong> Perform comprehensive integration testing to validate that the final calculated amount accurately reflects the cost of all ordered items and associated fees.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>3. Tracker Screen: Long dish names are cut off, and quantities are not aggregated</h3>
+                <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2F88ed3a79-45dc-49b2-bcf0-745c291b94db%2FScreen_Shot_2024-07-10_at_13.50.39.png?table=block&id=17b9f4be-d020-488d-af8a-6be5c6910fb6&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=1420&userId=&cache=v2" alt="Issue Screenshot">
+                <ul>
+                    <li><strong>Issue Description:</strong> On the order tracking screen, long dish names are not fully visible and get cut off. Additionally, multiple items of the same dish are listed individually rather than aggregating the quantity ordered into a single line item (e.g., "Dish Name x3").</li>
+                    <li><strong>Impact:</strong> This results in a cluttered and unclear order tracking screen, making it difficult for users to understand their orders and potentially causing confusion.</li>
+                    <li><strong><u>Recommendation:</u></strong><br><br>
+                        <ul>
+                            <li><strong>UI Enhancement:</strong> Implement text truncation with ellipsis for long dish names to ensure they fit within the allocated space. Aggregate quantities for the same dish to display them as a single line item.</li>
+                            <li><strong>Testing and Validation:</strong> Conduct extensive UI testing to verify the display of long dish names and quantity aggregation across different screen sizes and resolutions.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>4. Ensure the costs of each product match the costs outlined in the requirements</h3>
+                <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2Fbdd6c5f5-c319-4a39-9ce9-900c91497380%2FScreen_Shot_2024-07-10_at_14.07.18.png?table=block&id=322cb71c-6ceb-4aec-bb4c-5d33a722c171&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=2000&userId=&cache=v2" alt="Issue Screenshot">
+                <ul>
+                    <li><strong>Issue Description:</strong> The Vegan Beet Burger was listed at $25 per burger on the ordering screen, whereas the requirement document lists it at $15 per burger. When ordering two Vegan Beet Burgers, the total was incorrectly displayed as $30.</li>
+                    <li><strong>Impact:</strong> This discrepancy in pricing can lead to overcharging customers and potential loss of trust in the app's accuracy.</li>
+                    <li><strong><u>Recommendation:</u></strong><br><br>
+                        <ul>
+                            <li><strong>Pricing Correction:</strong> Review and correct the pricing logic for all products to ensure they match the requirements. Conduct thorough testing to validate the displayed prices against the requirement document.</li>
+                        </ul>
+                        <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2Faa99235f-d1fb-4063-be96-f775ce4f736c%2FScreen_Shot_2024-07-10_at_6.45.02_PM.png?table=block&id=dd51ed5d-40e0-4373-aa03-a3b99dea2802&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=1420&userId=&cache=v2" alt="Issue Screenshot">
+                    </li>
+                </ul>
+
+                <h3>5. Ensure the delivery time countdown matches the advertised delivery time</h3>
+                <img src="https://wary-ethernet-059.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ffaada197-3f00-4085-a2c7-f628f29ece6f%2F66d7fc4f-7ae9-4a03-a9e9-7486a9e064c3%2FScreen_Shot_2024-07-10_at_14.12.42.png?table=block&id=727f5243-5dae-4023-95a0-49a3a7b60add&spaceId=faada197-3f00-4085-a2c7-f628f29ece6f&width=2000&userId=&cache=v2" alt="Issue Screenshot">
+                <ul>
+                    <li><strong>Issue Description:</strong> The delivery time countdown did not match the advertised delivery time when placing an order, leading to inconsistencies in the order tracking.</li>
+                    <li><strong>Impact:</strong> Incorrect delivery time estimates can lead to customer dissatisfaction and reduced trust in the app's reliability.</li>
+                    <li><strong><u>Recommendation:</u></strong><br><br>
+                        <ul>
+                            <li><strong>Time Calculation Correction:</strong> Review and correct the delivery time calculation logic to ensure it accurately reflects the advertised delivery times. Test with various order scenarios to validate the consistency of the delivery time countdown.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <h2>CONCLUSION</h2>
+            <p>The Urban Lunch app was tested extensively using Android Studio and a Virtual Pixel 5 emulator with API 31. While most test cases passed successfully, several critical issues were identified, particularly concerning UI display, total amount calculation, and pricing discrepancies. Addressing these issues will improve the app's usability, accuracy, and overall user experience.</p><br>
+        </div>
+
+    </main>
+
+    
+
+    <script src="assets/js/project2.js"></script>
+</body>
+</html>
